@@ -45,6 +45,26 @@ trs.forEach(tr =>{
     }
 })
 
+trs.forEach(tr => {
+    let filhos = tr.children
+    
+    let status = filhos[5]
+       
+    if(status.textContent == 'Abaixo do Peso'){
+        status.style.backgroundColor = 'gray'
+    } else if(status.textContent == 'Peso Normal'){
+       status.style.backgroundColor = 'gray'
+    } else if(status.textContent == 'Sobrepeso'){ 
+        status.style.backgroundColor = 'green'
+    }else if(status.textContent == 'Obesidade Grau I'){
+        status.style.backgroundColor = 'yellow'
+    }else if(status.textContent == 'Obesidade Grau II'){
+        status.style.backgroundColor = 'purple'
+    }else if(status.textContent == 'Obesidade Grau III'){
+        status.style.backgroundColor = 'brown'
+    }
+})
+
 // filtro na tabela
 input.addEventListener('input', ()=>{
 
