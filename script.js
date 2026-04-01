@@ -34,34 +34,23 @@ for (let index = 0; index < 20 ; index++) {
 
 }
 
-
-
-trs.forEach(tr =>{
-    let filhos = tr.children
-    
-    let status = filhos[5]
-    if(status.textContent == 'RECUPERAÇÃO'){
-        tr.classList.add('recuperacao')
-    }
-})
-
 trs.forEach(tr => {
     let filhos = tr.children
     
     let status = filhos[5]
        
     if(status.textContent == 'Abaixo do Peso'){
-        status.style.backgroundColor = 'gray'
+        status.style.backgroundColor = '#eec6c6'
     } else if(status.textContent == 'Peso Normal'){
-       status.style.backgroundColor = 'gray'
+       status.style.backgroundColor = 'white'
     } else if(status.textContent == 'Sobrepeso'){ 
-        status.style.backgroundColor = 'green'
+        status.style.backgroundColor = 'red'
     }else if(status.textContent == 'Obesidade Grau I'){
-        status.style.backgroundColor = 'yellow'
+        status.style.backgroundColor = '#cb9c9c'
     }else if(status.textContent == 'Obesidade Grau II'){
-        status.style.backgroundColor = 'purple'
+        status.style.backgroundColor = '#6f3939'
     }else if(status.textContent == 'Obesidade Grau III'){
-        status.style.backgroundColor = 'brown'
+        status.style.backgroundColor = '#350a0a'
     }
 })
 
