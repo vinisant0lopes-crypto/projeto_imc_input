@@ -38,19 +38,20 @@ trs.forEach(tr => {
     let filhos = tr.children
     
     let status = filhos[5]
+    var pai =  status.parentNode
        
     if(status.textContent == 'Abaixo do Peso'){
-        status.style.backgroundColor = '#eec6c6'
+        pai.style.backgroundColor = '#eec6c6'
     } else if(status.textContent == 'Peso Normal'){
-       status.style.backgroundColor = 'white'
+       pai.style.backgroundColor = 'white'
     } else if(status.textContent == 'Sobrepeso'){ 
-        status.style.backgroundColor = 'red'
+        pai.style.backgroundColor = '#edf4d8'
     }else if(status.textContent == 'Obesidade Grau I'){
-        status.style.backgroundColor = '#cb9c9c'
+        pai.style.backgroundColor = '#cb9c9c'
     }else if(status.textContent == 'Obesidade Grau II'){
-        status.style.backgroundColor = '#6f3939'
+        pai.style.backgroundColor = '#6f3939'
     }else if(status.textContent == 'Obesidade Grau III'){
-        status.style.backgroundColor = '#350a0a'
+        pai.style.backgroundColor = '#350a0a'
     }
 })
 
